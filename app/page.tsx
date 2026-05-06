@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 type SkillGroupProps = {
   title: string;
   items: string[];
@@ -117,17 +117,15 @@ export default function Home() {
 
       <section id="home" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="grid items-center gap-12 md:grid-cols-[0.9fr_1.1fr]">
-          <div className="flex justify-center">
-            <div className="relative flex h-72 w-72 items-center justify-center rounded-full border border-stone-200 bg-white shadow-sm md:h-80 md:w-80">
-              <div className="absolute inset-4 rounded-full border border-stone-100" />
-              <div className="z-10 text-center">
-                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-stone-900 text-3xl font-bold text-white">
-                  RB
-                </div>
-                <p className="px-10 text-sm leading-6 text-stone-500">
-                  Add your professional photo here later
-                </p>
-              </div>
+         <div className="flex justify-center">
+            <div className="relative h-72 w-72 overflow-hidden rounded-full border border-stone-200 bg-white shadow-sm md:h-80 md:w-80">
+              <Image
+                src="/img/rabiap.png"
+                alt="Rabia Bembi"
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
           </div>
 
